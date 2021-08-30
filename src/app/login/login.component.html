@@ -1,0 +1,23 @@
+<div style="width: 100%; display: flex; justify-content: center; 
+align-items: center; height: 100%;">
+    <form [formGroup]="loginForm"
+    style="display: flex; flex-direction: column; 
+    justify-content: center; width: 30%;">
+        <mat-form-field appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input matInput placeholder="please enter User Name" formControlName="username" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="please enter Password" formControlName="password" required>
+        </mat-form-field>
+
+        <div style="display: flex; flex-direction: row; 
+        justify-content: flex-end;">
+            <button mat-raised-button color="primary" 
+            style="margin-right: 10px;" (click)="login()"> Login</button>
+            <button mat-stroked-button color="warn" 
+            (click)="formReset()"> Reset</button>    
+        </div>
+    </form>
+</div>
